@@ -39,12 +39,6 @@ public class KataRomanosTest {
         String romano = ToRomanos.convertir(2);
         assertEquals(romano, "II");
         
-
-        romano = ToRomanos.convertir(7);
-        assertEquals(romano, "VII");
-        
-        romano = ToRomanos.convertir(8);
-        assertEquals(romano, "VIII");
     }
     
      @Test
@@ -90,8 +84,7 @@ public class KataRomanosTest {
 
         String romano = ToRomanos.convertir(20);
         assertEquals(romano, "XX");
-        romano = ToRomanos.convertir(49);
-        assertEquals(romano, "XLIX");
+
 
     }
     @Test
