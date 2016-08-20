@@ -5,7 +5,6 @@
  */
 package test;
 
-
 import com.swii.kataromanos.*;
 import static org.testng.Assert.*;
 import org.testng.annotations.AfterClass;
@@ -38,45 +37,42 @@ public class KataRomanosTest {
 
         String romano = ToRomanos.convertir(2);
         assertEquals(romano, "II");
-        
+
     }
-    
-     @Test
+
+    @Test
     public void validarConversionDeUnDigitoVII7() throws RomanosCeroException, RomanosNegativoException {
 
         String romano = ToRomanos.convertir(7);
         assertEquals(romano, "VII");
     }
-    
 
     @Test
     public void validarConversionDeDigitosEspecialesIV4() throws RomanosCeroException, RomanosNegativoException {
         String romano = ToRomanos.convertir(4);
         assertEquals(romano, "IV");
-        
+
     }
+
     @Test
     public void validarConversionDeDigitosEspecialesIX9() throws RomanosCeroException, RomanosNegativoException {
         String romano = ToRomanos.convertir(9);
         assertEquals(romano, "IX");
-        
+
     }
-    
-     @Test
+
+    @Test
     public void validarConversionDeDigitosEspecialesXL40() throws RomanosCeroException, RomanosNegativoException {
         String romano = ToRomanos.convertir(40);
         assertEquals(romano, "XL");
-        
-        romano = ToRomanos.convertir(90);
-        assertEquals(romano, "XC");
-        
+
     }
-    
-     @Test
+
+    @Test
     public void validarConversionDeDigitosEspecialesXC90() throws RomanosCeroException, RomanosNegativoException {
         String romano = ToRomanos.convertir(90);
         assertEquals(romano, "XC");
-        
+
     }
 
     @Test
@@ -85,8 +81,8 @@ public class KataRomanosTest {
         String romano = ToRomanos.convertir(20);
         assertEquals(romano, "XX");
 
-
     }
+
     @Test
     public void validarConversionDeVariosDigitosXLIX49() throws RomanosCeroException, RomanosNegativoException {
 
@@ -102,6 +98,7 @@ public class KataRomanosTest {
         assertEquals(romano, "I");
 
     }
+
     @Test
     public void validarConversionDeNumeralBasicoV5() throws RomanosCeroException, RomanosNegativoException {
 
@@ -109,6 +106,7 @@ public class KataRomanosTest {
         assertEquals(romano, "V");
 
     }
+
     @Test
     public void validarConversionDeNumeralBasicoX10() throws RomanosCeroException, RomanosNegativoException {
 
@@ -116,6 +114,7 @@ public class KataRomanosTest {
         assertEquals(romano, "X");
 
     }
+
     @Test
     public void validarConversionDeNumeralBasicoL50() throws RomanosCeroException, RomanosNegativoException {
 
@@ -123,6 +122,7 @@ public class KataRomanosTest {
         assertEquals(romano, "L");
 
     }
+
     @Test
     public void validarConversionDeNumeralBasicoC100() throws RomanosCeroException, RomanosNegativoException {
 
@@ -130,6 +130,7 @@ public class KataRomanosTest {
         assertEquals(romano, "C");
 
     }
+
     @Test
     public void validarConversionDeNumeralBasicoD500() throws RomanosCeroException, RomanosNegativoException {
 
@@ -137,6 +138,7 @@ public class KataRomanosTest {
         assertEquals(romano, "D");
 
     }
+
     @Test
     public void validarConversionDeNumeralBasicoM1000() throws RomanosCeroException, RomanosNegativoException {
 
@@ -144,20 +146,12 @@ public class KataRomanosTest {
         assertEquals(romano, "M");
 
     }
-    
-        
-        
-        
-        
-        
-        
-    
-  /**
-   * 
-     * @throws java.lang.Exception
-   * @toDO  Codigo revisado por Daniel ALfonso  y Felipe Marciales
-   */ 
 
+    /**
+     *
+     * @throws java.lang.Exception
+     * @toDO Codigo revisado por Daniel ALfonso y Felipe Marciales
+     */
     @BeforeClass
     public static void setUpClass() throws Exception {
     }

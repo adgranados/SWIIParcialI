@@ -28,7 +28,7 @@ public class ToRomanos {
     public static String convertir(int i) throws RomanosCeroException, RomanosNegativoException {
         validarCero(i);
         validarNegativo(i);
-        return "";
+        return convertirANumerosRomanos(i);
     }
 
     /**
