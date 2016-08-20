@@ -5,7 +5,8 @@
  */
 package test;
 
-import com.swii.kataromanos.ToRomanos;
+
+import com.swii.kataromanos.*;
 import static org.testng.Assert.*;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
@@ -22,18 +23,18 @@ public class KataRomanosTest {
     public KataRomanosTest() {
     }
 
-    @Test(expectedExceptions = Exception.class)
-    public void validarErrorAlPasarCero() {
+    @Test(expectedExceptions = RomanosCeroException.class)
+    public void validarErrorAlPasarCero() throws RomanosCeroException, RomanosNegativoException {
         String romano = ToRomanos.convertir(0);
     }
 
-    @Test(expectedExceptions = Exception.class)
-    public void validarErrorAlPasarNegativo() {
+    @Test(expectedExceptions = RomanosNegativoException.class)
+    public void validarErrorAlPasarNegativo() throws RomanosCeroException, RomanosNegativoException {
         String romano = ToRomanos.convertir(-1);
     }
 
     @Test
-    public void validarConversionDeUnDigito() {
+    public void validarConversionDeUnDigito() throws RomanosCeroException, RomanosNegativoException {
 
         String romano = ToRomanos.convertir(2);
         assertEquals(romano, "II");
@@ -49,7 +50,7 @@ public class KataRomanosTest {
     }
 
     @Test
-    public void validarConversionDeDigitosEspeciales() {
+    public void validarConversionDeDigitosEspeciales() throws RomanosCeroException, RomanosNegativoException {
         String romano = ToRomanos.convertir(4);
         assertEquals(romano, "IV");
         
@@ -65,7 +66,7 @@ public class KataRomanosTest {
     }
 
     @Test
-    public void validarConversionDeVariosDigitos() {
+    public void validarConversionDeVariosDigitos() throws RomanosCeroException, RomanosNegativoException {
 
         String romano = ToRomanos.convertir(20);
         assertEquals(romano, "XX");
@@ -75,7 +76,7 @@ public class KataRomanosTest {
     }
 
     @Test
-    public void validarConversionDeNumeralesBasicos() {
+    public void validarConversionDeNumeralesBasicos() throws RomanosCeroException, RomanosNegativoException {
 
         String romano = ToRomanos.convertir(1);
         assertEquals(romano, "I");

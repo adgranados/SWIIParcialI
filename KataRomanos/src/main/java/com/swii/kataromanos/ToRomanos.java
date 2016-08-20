@@ -11,8 +11,20 @@ package com.swii.kataromanos;
  */
 public class ToRomanos {
 
-    public static String convertir(int i) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    private static void validarCero(int i) throws RomanosCeroException{
+        if(i==0){
+            throw new RomanosCeroException("En los numeros Romanos no hay una representacion para el Cero");
+        }
+    }
+    private static void validarNegativo(int i) throws RomanosNegativoException{
+        if(i<0){
+            throw new RomanosNegativoException("En los numeros Romanos no hay una representacion para Numeors negativos");
+        }
+    }
+    public static String convertir(int i) throws RomanosCeroException, RomanosNegativoException {
+        validarCero(i);
+        validarNegativo(i);
+        return "";
     }
     
 }
